@@ -1,0 +1,190 @@
+/* ==========================
+   ESTILOS GENERALES
+========================== */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #f8f9fc;
+  color: #333;
+}
+
+/* ==========================
+   ENCABEZADO
+========================== */
+.header {
+  background: linear-gradient(to right, #1e3c72, #2aeca4);
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+  margin: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.header p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+/* ==========================
+   GRÁFICAS
+========================== */
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 480px;
+  max-width: 800px;
+  min-width: 300px;
+  box-sizing: border-box;
+}
+
+.chart-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.4em;
+}
+
+.valor-indicador {
+  font-size: 0.9em;
+  font-weight: normal;
+  background: #ecf0f1;
+  color: #2c3e50;
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.chart-box {
+  width: 100%;
+  height: 350px;
+}
+
+/* ==========================
+   ALERTAS
+========================== */
+#alertas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0 auto 30px;
+  padding: 10px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.alerta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.95em;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  min-width: 240px;
+  text-align: center;
+}
+
+.alerta-roja    { background-color: #e74c3c; }
+.alerta-naranja { background-color: #f39c12; }
+.alerta-celeste { background-color: #3498db; }
+.alerta-azul    { background-color: #3f51b5; }
+
+/* ==========================
+   BOTONES DE DESCARGA
+========================== */
+.descargas-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 40px auto 60px;
+  padding: 10px;
+  text-align: center;
+}
+
+.btn-descarga {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e3c72;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  min-width: 220px;
+  max-width: 300px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.btn-descarga:hover {
+  background-color: #155ab4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  .header h1 { font-size: 1.8em; }
+  .header p  { font-size: 1em; }
+}
+
+@media (max-width: 600px) {
+  .descargas-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .btn-descarga {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-card h3 {
+    font-size: 1.1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .valor-indicador {
+    margin-left: 0;
+    margin-top: 6px;
+    font-size: 1em;
+  }
+
+  .chart-box {
+    height: 250px;
+  }
+}

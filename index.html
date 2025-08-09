@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Monitoreo Ambiental</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="frontend/styles.css" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Sistema de Monitoreo Ambiental</h1>
+    <p>Visualiza en tiempo real la temperatura y humedad del entorno</p>
+  </header>
+
+  <section id="alertas"></section>
+
+  <section class="charts-container">
+    <div class="chart-card">
+      <h3>
+        Temperatura actual
+        <span id="valorTemperatura" class="valor-indicador">-- °C</span>
+      </h3>
+      <div id="graficaTemperatura" class="chart-box"></div>
+    </div>
+
+    <div class="chart-card">
+      <h3>
+        Humedad actual
+        <span id="valorHumedad" class="valor-indicador">-- %</span>
+      </h3>
+      <div id="graficaHumedad" class="chart-box"></div>
+    </div>
+  </section>
+
+  <section class="descargas-container">
+    <a href="backend/exportar_csv.php?tipo=temperatura" class="btn-descarga">Descargar Temperatura</a>
+    <a href="backend/exportar_csv.php?tipo=humedad" class="btn-descarga">Descargar Humedad</a>
+    <a href="backend/exportar_csv.php?tipo=completo" class="btn-descarga">Descargar Todo</a>
+  </section>
+
+  <script src="frontend/script.js"></script>
+</body>
+</html>
